@@ -1,2 +1,615 @@
-# protocolo-florenca
-Protocolo Florença - Dra. Marina Flôres
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protocolo Florença · Dra. Marina Flôres</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g:#B8922A;
+  --g2:#D4AC4A;
+  --g3:rgba(184,146,42,0.15);
+  --g4:rgba(184,146,42,0.07);
+  --ink:#1A1209;
+  --ink2:#2C2015;
+  --paper:#FAF6F0;
+  --paper2:#F3EDE3;
+  --paper3:#EDE4D6;
+  --text:#4A3B28;
+  --muted:#8A7860;
+  --light:#C8B898;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Jost',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+/* NAV */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:99;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 24px;
+  background:rgba(250,246,240,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(184,146,42,0.12);
+}
+.nav-brand{
+  font-family:'Playfair Display',serif;
+  font-size:15px;letter-spacing:2px;
+  color:var(--g);font-style:italic;
+}
+.nav-btn{
+  font-size:9px;letter-spacing:4px;font-weight:500;
+  color:var(--g);
+  border:1px solid rgba(184,146,42,0.4);
+  padding:8px 16px;text-decoration:none;
+  transition:all .3s;
+}
+.nav-btn:hover{background:var(--g);color:var(--paper)}
+
+/* HERO - full screen editorial */
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-rows:1fr auto;
+  padding:100px 28px 50px;
+  background:linear-gradient(160deg,var(--paper) 0%,var(--paper2) 60%,var(--paper3) 100%);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'FLORENÇA';
+  position:absolute;
+  right:-20px;top:50%;transform:translateY(-60%) rotate(90deg);
+  font-family:'Playfair Display',serif;
+  font-size:80px;letter-spacing:20px;font-style:italic;
+  color:rgba(184,146,42,0.06);
+  white-space:nowrap;pointer-events:none;
+  transform-origin:right center;
+}
+.hero-kicker{
+  display:flex;align-items:center;gap:12px;
+  font-size:9px;letter-spacing:5px;font-weight:500;
+  color:var(--g);margin-bottom:28px;
+}
+.hero-kicker::before{content:'';width:28px;height:1px;background:var(--g)}
+.hero-main{flex:1;display:flex;flex-direction:column;justify-content:center}
+.hero-h{
+  font-family:'Playfair Display',serif;
+  font-size:52px;font-weight:400;line-height:1.05;
+  color:var(--ink);margin-bottom:20px;
+}
+.hero-h em{font-style:italic;color:var(--g)}
+.hero-divider{width:1px;height:48px;background:var(--g);margin:24px 0;opacity:.5}
+.hero-p{
+  font-size:13px;line-height:2;color:var(--text);
+  font-weight:300;max-width:300px;margin-bottom:36px;
+}
+.hero-ctas{display:flex;flex-direction:column;gap:10px}
+.cta-primary{
+  display:block;text-align:center;
+  font-size:9px;letter-spacing:4px;font-weight:500;
+  background:var(--g);color:var(--paper);
+  padding:16px 24px;text-decoration:none;
+  transition:all .3s;
+}
+.cta-primary:hover{background:var(--ink)}
+.cta-ghost{
+  display:block;text-align:center;
+  font-size:9px;letter-spacing:4px;font-weight:500;
+  color:var(--g);border:1px solid rgba(184,146,42,0.35);
+  padding:16px 24px;text-decoration:none;
+  transition:all .3s;
+}
+.cta-ghost:hover{border-color:var(--g);background:var(--g3)}
+.hero-footnote{
+  font-size:10px;letter-spacing:2px;color:var(--light);
+  text-align:center;padding-top:28px;
+  border-top:1px solid rgba(184,146,42,0.1);
+}
+
+/* EDITORIAL BREAK */
+.break{
+  background:var(--ink);
+  padding:60px 28px;
+  text-align:center;
+}
+.break-q{
+  font-family:'Playfair Display',serif;
+  font-size:26px;font-style:italic;font-weight:400;
+  color:var(--paper);line-height:1.5;margin-bottom:18px;
+}
+.break-q em{color:var(--g2)}
+.break-attr{
+  font-size:9px;letter-spacing:4px;color:var(--g);
+}
+
+/* SECTIONS */
+.sec{
+  padding:72px 28px;
+  border-top:1px solid rgba(184,146,42,0.08);
+}
+.sec-alt{background:var(--paper2)}
+.sec-dark{background:var(--ink2);color:var(--paper)}
+
+.label{
+  display:flex;align-items:center;gap:10px;
+  font-size:9px;letter-spacing:5px;font-weight:500;
+  color:var(--g);margin-bottom:24px;
+}
+.label::before{content:'';width:16px;height:1px;background:var(--g)}
+
+.h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;font-weight:400;line-height:1.15;
+  color:var(--ink);margin-bottom:12px;
+}
+.h2 em{font-style:italic;color:var(--g)}
+.sec-dark .h2{color:var(--paper)}
+
+.rule{width:32px;height:1px;background:var(--g);margin:20px 0;opacity:.6}
+
+.p{font-size:13px;line-height:2;color:var(--text);font-weight:300}
+.p strong{color:var(--ink);font-weight:500}
+.sec-dark .p{color:rgba(250,246,240,0.65)}
+.sec-dark .p strong{color:var(--paper)}
+
+/* CAMADAS - visual timeline */
+.camadas{margin-top:40px}
+.camada{
+  display:grid;grid-template-columns:40px 1fr;
+  gap:0 20px;margin-bottom:0;
+  position:relative;
+}
+.camada-line{
+  display:flex;flex-direction:column;align-items:center;
+}
+.camada-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--paper);border:1.5px solid var(--g);
+  flex-shrink:0;margin-top:4px;
+}
+.camada-dot.active{background:var(--g)}
+.camada-track{
+  width:1px;flex:1;background:rgba(184,146,42,0.2);
+  margin:6px 0;
+}
+.camada:last-child .camada-track{display:none}
+.camada-body{padding-bottom:32px}
+.camada-tag{
+  font-size:8px;letter-spacing:4px;color:var(--g);
+  margin-bottom:6px;font-weight:500;
+}
+.camada-name{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:400;
+  color:var(--ink);margin-bottom:8px;
+}
+.sec-dark .camada-name{color:var(--paper)}
+.camada-text{font-size:12px;line-height:1.9;color:var(--text);font-weight:300}
+.sec-dark .camada-text{color:rgba(250,246,240,0.55)}
+.camada-fact{
+  display:inline-block;margin-top:10px;
+  font-size:10px;color:var(--g);font-style:italic;
+  border-left:2px solid var(--g);padding-left:10px;
+}
+
+/* PROCEDIMENTOS */
+.proc-list{margin-top:40px}
+.proc{
+  border-top:1px solid rgba(184,146,42,0.12);
+  padding:28px 0;
+}
+.proc:last-child{border-bottom:1px solid rgba(184,146,42,0.12)}
+.proc-header{
+  display:flex;justify-content:space-between;
+  align-items:flex-start;margin-bottom:14px;
+}
+.proc-num{
+  font-family:'Playfair Display',serif;
+  font-size:48px;font-weight:400;
+  color:rgba(184,146,42,0.15);line-height:1;
+}
+.proc-tag{font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:4px}
+.proc-name{
+  font-family:'Playfair Display',serif;
+  font-size:22px;font-weight:400;color:var(--ink);
+}
+.proc-body{font-size:12px;line-height:2;color:var(--text);font-weight:300}
+.proc-body strong{color:var(--ink);font-weight:500}
+.proc-dado{
+  margin-top:12px;
+  background:var(--g4);
+  border:1px solid rgba(184,146,42,0.15);
+  padding:12px 14px;
+  font-size:11px;color:var(--g);font-style:italic;line-height:1.6;
+}
+
+/* PROGRESSÃO */
+.prog-list{margin-top:40px}
+.prog{
+  display:grid;grid-template-columns:70px 1fr;
+  gap:0 16px;
+  padding:24px 0;
+  border-top:1px solid rgba(184,146,42,0.08);
+}
+.prog:last-child{border-bottom:1px solid rgba(184,146,42,0.08)}
+.prog-time{
+  font-family:'Playfair Display',serif;
+  font-size:11px;color:var(--g);font-style:italic;
+  line-height:1.4;padding-top:3px;
+}
+.prog-title{
+  font-size:13px;font-weight:500;
+  color:var(--ink);margin-bottom:6px;
+}
+.prog-text{font-size:12px;line-height:1.9;color:var(--text);font-weight:300}
+
+/* DEPOIMENTOS */
+.deps{margin-top:32px}
+.dep{
+  padding:28px 0;
+  border-bottom:1px solid rgba(184,146,42,0.08);
+}
+.dep:first-child{border-top:1px solid rgba(184,146,42,0.08)}
+.dep-text{
+  font-family:'Playfair Display',serif;
+  font-size:19px;font-style:italic;font-weight:400;
+  color:var(--paper);line-height:1.6;margin-bottom:8px;
+}
+.dep-who{font-size:9px;letter-spacing:3px;color:var(--g)}
+
+/* AVALIAÇÃO - destaque total */
+.av{background:var(--paper3)}
+.av-intro{
+  margin-bottom:36px;
+}
+.av-blocos{margin:36px 0}
+.av-bloco{
+  border-top:1px solid rgba(184,146,42,0.12);
+  padding:24px 0;
+  display:grid;grid-template-columns:32px 1fr;gap:0 16px;
+}
+.av-bloco:last-child{border-bottom:1px solid rgba(184,146,42,0.12)}
+.av-n{
+  font-family:'Playfair Display',serif;
+  font-size:28px;font-weight:400;
+  color:rgba(184,146,42,0.25);line-height:1;
+}
+.av-title{
+  font-size:11px;letter-spacing:2px;font-weight:500;
+  color:var(--ink);margin-bottom:6px;
+}
+.av-text{font-size:12px;line-height:1.9;color:var(--text);font-weight:300}
+
+.av-valor{
+  background:var(--ink);
+  padding:32px 24px;
+  margin:32px 0;
+}
+.av-valor-label{font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:14px}
+.av-valor-price{
+  font-family:'Playfair Display',serif;
+  font-size:56px;font-weight:400;color:var(--paper);
+  line-height:1;margin-bottom:6px;
+}
+.av-valor-price sup{font-size:22px;vertical-align:super}
+.av-valor-obs{
+  font-size:10px;letter-spacing:2px;color:var(--g);
+  margin-bottom:16px;
+}
+.av-valor-desc{
+  font-size:12px;line-height:1.9;
+  color:rgba(250,246,240,0.55);font-weight:300;
+  border-top:1px solid rgba(250,246,240,0.08);
+  padding-top:14px;font-style:italic;
+}
+
+.av-nota{
+  font-size:11px;line-height:1.9;color:var(--muted);
+  text-align:center;margin:24px 0;
+  border-top:1px solid rgba(184,146,42,0.08);
+  padding-top:20px;
+}
+
+/* FINAL */
+.final{
+  background:var(--ink);
+  padding:80px 28px 60px;
+  text-align:center;
+}
+.final-over{font-size:9px;letter-spacing:5px;color:var(--g);margin-bottom:28px}
+.final-h{
+  font-family:'Playfair Display',serif;
+  font-size:36px;font-weight:400;font-style:italic;
+  color:var(--paper);line-height:1.2;margin-bottom:12px;
+}
+.final-h em{color:var(--g2)}
+.final-p{
+  font-size:12px;line-height:2;color:rgba(250,246,240,0.5);
+  font-weight:300;margin-bottom:40px;
+}
+.final-btn{
+  display:block;
+  font-size:9px;letter-spacing:4px;font-weight:500;
+  background:var(--g);color:var(--paper);
+  padding:18px 24px;text-decoration:none;
+  margin-bottom:40px;transition:all .3s;
+}
+.final-btn:hover{background:#D4AC4A}
+.final-sig{
+  font-size:9px;letter-spacing:3px;
+  color:rgba(250,246,240,0.2);
+}
+
+/* FADE IN */
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-kicker{animation:up .8s .1s both}
+.hero-h{animation:up .8s .25s both}
+.hero-divider{animation:up .8s .4s both}
+.hero-p{animation:up .8s .5s both}
+.hero-ctas{animation:up .8s .65s both}
+.hero-footnote{animation:up .8s .8s both}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-brand">Florença</span>
+  <a href="#agendar" class="nav-btn">AGENDAR</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-main">
+    <p class="hero-kicker">DRA. MARINA FLÔRES · PORTO ALEGRE</p>
+    <h1 class="hero-h">O rosto que você<br>perdeu ainda<br><em>existe.</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-p">O Protocolo Florença age simultaneamente nas três camadas do envelhecimento facial — de dentro para fora. O resultado é aquele que ninguém consegue nomear, mas todo mundo percebe.</p>
+    <div class="hero-ctas">
+      <a href="#agendar" class="cta-primary">QUERO ENTENDER MEU CASO</a>
+      <a href="#protocolo" class="cta-ghost">COMO FUNCIONA</a>
+    </div>
+  </div>
+  <p class="hero-footnote">FACE RESET · PROTOCOLO EXCLUSIVO · DRA. MARINA FLÔRES</p>
+</div>
+
+<!-- BREAK EDITORIAL -->
+<div class="break">
+  <p class="break-q">"O melhor resultado é aquele que<br>as pessoas percebem — mas <em>não conseguem nomear.</em>"</p>
+  <p class="break-attr">DRA. MARINA FLÔRES</p>
+</div>
+
+<!-- O PROBLEMA -->
+<section class="sec" id="conceito">
+  <p class="label">O QUE NINGUÉM EXPLICA</p>
+  <h2 class="h2">O rosto não<br>envelhece em<br><em>um lugar só.</em></h2>
+  <div class="rule"></div>
+  <p class="p">Ele envelhece em três camadas ao mesmo tempo. É por isso que um procedimento isolado nunca entrega o que você de fato quer — ele cuida de uma camada e ignora as outras duas.</p>
+  <p class="p" style="margin-top:14px">O rosto melhora um pouco. Mas nunca fica como você sente que deveria.</p>
+
+  <div class="camadas">
+    <div class="camada">
+      <div class="camada-line">
+        <div class="camada-dot active"></div>
+        <div class="camada-track"></div>
+      </div>
+      <div class="camada-body">
+        <p class="camada-tag">CAMADA SUPERFICIAL</p>
+        <h3 class="camada-name">A pele</h3>
+        <p class="camada-text">Que perdeu viço, hidratação, a luminosidade natural. O glow que a rotina e os anos foram apagando, quase sem que você percebesse.</p>
+      </div>
+    </div>
+    <div class="camada">
+      <div class="camada-line">
+        <div class="camada-dot active"></div>
+        <div class="camada-track"></div>
+      </div>
+      <div class="camada-body">
+        <p class="camada-tag">CAMADA INTERMEDIÁRIA</p>
+        <h3 class="camada-name">O colágeno</h3>
+        <p class="camada-text">Que foi sumindo aos poucos, levando a firmeza e o contorno junto. Essa sensação de que o rosto "derreteu" — é real. E tem solução.</p>
+      </div>
+    </div>
+    <div class="camada">
+      <div class="camada-line">
+        <div class="camada-dot active"></div>
+        <div class="camada-track"></div>
+      </div>
+      <div class="camada-body">
+        <p class="camada-tag">CAMADA PROFUNDA</p>
+        <h3 class="camada-name">A estrutura</h3>
+        <p class="camada-text">O alicerce muscular que sustenta o rosto inteiro. Quando ele cede, tudo começa a descer. É a camada que nenhum produto tópico atinge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROTOCOLO -->
+<section class="sec sec-alt" id="protocolo">
+  <p class="label">O PROTOCOLO</p>
+  <h2 class="h2">Três camadas.<br><em>Ao mesmo tempo.</em></h2>
+  <div class="rule"></div>
+  <p class="p">O Florença é o único protocolo que age simultaneamente nas três camadas — com tecnologias específicas para cada uma delas.</p>
+
+  <div class="proc-list">
+    <div class="proc">
+      <div class="proc-header">
+        <div>
+          <p class="proc-tag">ESTRUTURA MUSCULAR</p>
+          <h3 class="proc-name">HIPRO</h3>
+        </div>
+        <div class="proc-num">01</div>
+      </div>
+      <p class="proc-body">Ultrassom microfocado que age no <strong>SMAS</strong> — o sistema muscular profundo do rosto. A mesma camada que os cirurgiões plásticos reposicionam em um lifting. Sem corte, sem agulha, sem tempo de recuperação.<br><br>Pontos de coagulação térmica de precisão milimétrica. O rosto começa a se reposicionar de dentro para fora.</p>
+      <div class="proc-dado">Equipamento próprio da Dra. Marina — protocolo construído exclusivamente para o seu caso.</div>
+    </div>
+    <div class="proc">
+      <div class="proc-header">
+        <div>
+          <p class="proc-tag">COLÁGENO PROFUNDO</p>
+          <h3 class="proc-name">Sculptra</h3>
+        </div>
+        <div class="proc-num">02</div>
+      </div>
+      <p class="proc-body">O Sculptra não preenche de fora. Ele <strong>ativa o organismo para fabricar colágeno novo</strong> naquela área — como reiniciar um processo que desacelerou com a idade.<br><br>O ácido poli-L-láctico (PLLA) ativa os fibroblastos nas camadas profundas, gerando firmeza progressiva e duradoura que vem de dentro.</p>
+      <div class="proc-dado">Aumento comprovado de 66,5% na produção de colágeno tipo I. Duração de até 25 meses.</div>
+    </div>
+    <div class="proc">
+      <div class="proc-header">
+        <div>
+          <p class="proc-tag">SUPERFÍCIE DA PELE</p>
+          <h3 class="proc-name">Mesoterapia</h3>
+        </div>
+        <div class="proc-num">03</div>
+      </div>
+      <p class="proc-body">A camada que todo mundo vê primeiro — e que nenhum creme trata de verdade. A mesoterapia entrega <strong>vitaminas, minerais e ativos inteligentes diretamente onde a pele precisa</strong>, com absorção superior a 90%.<br><br>Aquele viço. Aquele glow. Como se a pele tivesse respirado de novo.</p>
+      <div class="proc-dado">Absorção superior a 90% — atua onde cremes simplesmente não chegam.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESSÃO -->
+<section class="sec sec-dark" id="resultado">
+  <p class="label" style="color:var(--g)">A JORNADA</p>
+  <h2 class="h2">O resultado não<br>aparece de uma vez.<br><em>Ele vai chegando.</em></h2>
+  <div class="rule"></div>
+  <p class="p">E é exatamente isso que o torna tão especial — e tão natural. Ninguém percebe o procedimento. Todo mundo percebe você.</p>
+
+  <div class="prog-list">
+    <div class="prog">
+      <p class="prog-time">Primeiras<br>semanas</p>
+      <div>
+        <p class="prog-title" style="color:var(--paper)">A pele respira</p>
+        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O viço volta. A pele parece mais viva, mais descansada. Algo mudou — mas você ainda não consegue nomear o quê.</p>
+      </div>
+    </div>
+    <div class="prog">
+      <p class="prog-time">30 a 60<br>dias</p>
+      <div>
+        <p class="prog-title" style="color:var(--paper)">A firmeza chega</p>
+        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O colágeno novo vai sendo depositado. O rosto ganha sustentação — como se estivesse recuperando uma estrutura que você nem sabia que havia perdido.</p>
+      </div>
+    </div>
+    <div class="prog">
+      <p class="prog-time">60 a 90<br>dias</p>
+      <div>
+        <p class="prog-title" style="color:var(--paper)">O lifting se consolida</p>
+        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O SMAS responde. O contorno volta. O rosto se reposiciona. O resultado vai ficando cada vez mais natural — como se o tempo tivesse andado para trás.</p>
+      </div>
+    </div>
+    <div class="prog">
+      <p class="prog-time">Meses<br>seguintes</p>
+      <div>
+        <p class="prog-title" style="color:var(--g2)">Ninguém nomeia. Todo mundo percebe.</p>
+        <p class="prog-text" style="color:rgba(250,246,240,0.55)">As pessoas perguntam se você viajou. Se está descansada. Se está bem. Ninguém percebe o procedimento. Todo mundo percebe a diferença.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<div class="break" style="padding:52px 28px">
+  <div class="deps">
+    <div class="dep">
+      <p class="dep-text">"Não é uma pessoa nova. É você — do jeito que sempre sentiu que deveria estar te olhando no espelho."</p>
+      <p class="dep-who">PILAR EMOCIONAL · PROTOCOLO FLORENÇA</p>
+    </div>
+    <div class="dep">
+      <p class="dep-text">"Voltei a tirar foto de perfil sem pensar duas vezes."</p>
+      <p class="dep-who">PACIENTE · 44 ANOS</p>
+    </div>
+    <div class="dep">
+      <p class="dep-text">"As pessoas perguntaram se eu tinha viajado. Não sabiam o quê — só que eu estava diferente."</p>
+      <p class="dep-who">PACIENTE · 51 ANOS</p>
+    </div>
+  </div>
+</div>
+
+<!-- ESPECIALISTA -->
+<section class="sec">
+  <p class="label">A ESPECIALISTA</p>
+  <h2 class="h2">Ela prefere não fazer<br><em>a descaracterizar.</em></h2>
+  <div class="rule"></div>
+  <p class="p">O Protocolo Florença não é um menu. É uma curadoria assinada pela Dra. Marina — que avalia cada rosto como único e define <strong>o que faz sentido para aquela mulher específica</strong>, naquele momento.</p>
+
+  <div style="margin-top:32px;padding:24px 20px;background:var(--paper3);border-left:2px solid var(--g)">
+    <p style="font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:12px">DIFERENCIAL TÉCNICO</p>
+    <p style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:10px">Ultrassom de imagem antes de qualquer aplicação.</p>
+    <p style="font-size:12px;line-height:1.9;color:var(--text);font-weight:300">A Dra. Marina é uma das poucas profissionais que visualiza exatamente como está a musculatura do rosto, o que ainda há de produto ativo de aplicações anteriores e onde cada ponto entregará o melhor resultado. Não é achismo. É precisão clínica real.</p>
+  </div>
+
+  <div style="margin-top:16px;padding:24px 20px;background:var(--paper3);border-left:2px solid rgba(184,146,42,0.3)">
+    <p style="font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:12px">FILOSOFIA</p>
+    <p style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--ink);line-height:1.6">"A técnica deve ser soberana. O resultado, invisível."</p>
+  </div>
+</section>
+
+<!-- AVALIAÇÃO -->
+<section class="sec av" id="agendar">
+  <p class="label">O PRIMEIRO PASSO</p>
+  <h2 class="h2">A avaliação não é<br>uma consulta.<br><em>É onde tudo começa.</em></h2>
+  <div class="rule"></div>
+  <div class="av-intro">
+    <p class="p">Muitas pacientes chegam à Dra. Marina após anos carregando um incômodo que nunca foi realmente nomeado. Uma flacidez que foi chegando. Um contorno que foi cedendo. Um olhar que foi pesando.</p>
+    <p class="p" style="margin-top:14px">Sensações que elas sabem que existem — mas que ninguém até então soube olhar de verdade.</p>
+  </div>
+
+  <div class="av-blocos">
+    <div class="av-bloco">
+      <div class="av-n">01</div>
+      <div>
+        <p class="av-title">MAPA DAS TRÊS CAMADAS</p>
+        <p class="av-text">A Dra. Marina analisa cada camada individualmente — entendendo o que o tempo levou de cada uma e o que ainda há de estrutura para trabalhar.</p>
+      </div>
+    </div>
+    <div class="av-bloco">
+      <div class="av-n">02</div>
+      <div>
+        <p class="av-title">ULTRASSOM DE IMAGEM</p>
+        <p class="av-text">Antes de qualquer decisão, ela visualiza a musculatura do seu rosto e o que ainda há de produto ativo de aplicações anteriores. Precisão clínica real.</p>
+      </div>
+    </div>
+    <div class="av-bloco">
+      <div class="av-n">03</div>
+      <div>
+        <p class="av-title">PROTOCOLO EXCLUSIVO</p>
+        <p class="av-text">O Florença não tem versão padrão. Ela monta o protocolo pensado só para você — o que fazer, em qual ordem, em qual camada. Sem receita pronta.</p>
+      </div>
+    </div>
+    <div class="av-bloco">
+      <div class="av-n">04</div>
+      <div>
+        <p class="av-title">CLAREZA REAL</p>
+        <p class="av-text">Você sai sabendo exatamente o que está acontecendo com o seu rosto — e o que ainda é possível recuperar. Não é pressão para fazer nada. É consciência.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="av-valor">
+    <p class="av-valor-label">INVESTIMENTO NA AVALIAÇÃO</p>
+    <p class="av-valor-price"><sup>R$</sup>190<span style="font-size:24px">,00</span></p>
+    <p class="av-valor-obs">100% REVERTIDO NO PROCEDIMENTO ESCOLHIDO</p>
+    <p class="av-valor-desc">Você não perde nada. Só ganha a clareza que deveria ter tido desde o início.</p>
+  </div>
+
+  <a href="https://wa.me/555199999999" class="cta-primary">AGENDAR MINHA AVALIAÇÃO</a>
+
+  <p class="av-nota">A avaliação é presencial com a Dra. Marina Flôres em Porto Alegre.<br>O Protocolo Florença completo pode ser parcelado em até 10x sem juros — os juros ficam por conta da clínica.</p>
+</section>
+
+<!-- FINAL -->
+<div class="final">
+  <p class="final-over">PROTOCOLO FLORENÇA</p>
+  <h2 class="final-h">O rosto que você<br>perdeu ainda <em>existe.</em><br>A gente devolve.</h2>
+  <p class="final-p">Uma conversa. Um olhar atento. Um plano feito exclusivamente para você.</p>
+  <a href="https://wa.me/555199999999" class="final-btn">AGENDAR AVALIAÇÃO → </a>
+  <p class="final-sig">DRA. MARINA FLÔRES · PORTO ALEGRE, RS · CRO 20691</p>
+</div>
+
+</body>
+</html>
