@@ -52,32 +52,32 @@ body{
 }
 .nav-btn:hover{background:var(--g);color:var(--paper)}
 
-/* HERO - full screen editorial */
 .hero{
   min-height:100vh;
-  display:grid;
-  grid-template-rows:1fr auto;
-  padding:100px 28px 50px;
+  display:flex;flex-direction:column;
+  padding:80px 28px 40px;
   background:linear-gradient(160deg,var(--paper) 0%,var(--paper2) 60%,var(--paper3) 100%);
   position:relative;overflow:hidden;
 }
-.hero::before{
-  content:'FLORENÇA';
-  position:absolute;
-  right:-20px;top:50%;transform:translateY(-60%) rotate(90deg);
-  font-family:'Playfair Display',serif;
-  font-size:80px;letter-spacing:20px;font-style:italic;
-  color:rgba(184,146,42,0.06);
-  white-space:nowrap;pointer-events:none;
-  transform-origin:right center;
+.hero-inner{
+  flex:1;display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;align-items:center;
+  min-height:calc(100vh - 160px);
+}
+.hero-left{display:flex;flex-direction:column;justify-content:center}
+.hero-right{display:flex;align-items:flex-end;justify-content:center;height:100%}
+.hero-foto{
+  width:100%;max-width:340px;height:auto;display:block;
+  filter:drop-shadow(0 24px 48px rgba(26,18,9,0.18));
 }
 .hero-kicker{
   display:flex;align-items:center;gap:12px;
   font-size:9px;letter-spacing:5px;font-weight:500;
-  color:var(--g);margin-bottom:28px;
+  color:var(--g);margin-bottom:24px;
 }
 .hero-kicker::before{content:'';width:28px;height:1px;background:var(--g)}
-.hero-main{flex:1;display:flex;flex-direction:column;justify-content:center}
+.hero-main{display:flex;flex-direction:column;}
 .hero-h{
   font-family:'Playfair Display',serif;
   font-size:52px;font-weight:400;line-height:1.05;
@@ -365,14 +365,21 @@ body{
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-main">
-    <p class="hero-kicker">DRA. MARINA FLÔRES · PORTO ALEGRE</p>
-    <h1 class="hero-h">O rosto que você<br>perdeu ainda<br><em>existe.</em></h1>
-    <div class="hero-divider"></div>
-    <p class="hero-p">O Protocolo Florença age simultaneamente nas três camadas do envelhecimento facial — de dentro para fora. O resultado é aquele que ninguém consegue nomear, mas todo mundo percebe.</p>
-    <div class="hero-ctas">
-      <a href="#agendar" class="cta-primary">QUERO ENTENDER MEU CASO</a>
-      <a href="#protocolo" class="cta-ghost">COMO FUNCIONA</a>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-main">
+        <p class="hero-kicker">DRA. MARINA FLÔRES · PORTO ALEGRE</p>
+        <h1 class="hero-h">O rosto que você<br>perdeu ainda<br><em>existe.</em></h1>
+        <div class="hero-divider"></div>
+        <p class="hero-p">O Protocolo Florença age simultaneamente nas três camadas do envelhecimento facial — de dentro para fora. O resultado é aquele que ninguém consegue nomear, mas todo mundo percebe.</p>
+        <div class="hero-ctas">
+          <a href="#agendar" class="cta-primary">QUERO ENTENDER MEU CASO</a>
+          <a href="#protocolo" class="cta-ghost">COMO FUNCIONA</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="marina-foto.png" alt="Dra. Marina Flôres" class="hero-foto">
     </div>
   </div>
   <p class="hero-footnote">FACE RESET · PROTOCOLO EXCLUSIVO · DRA. MARINA FLÔRES</p>
@@ -516,7 +523,7 @@ body{
 <div class="break" style="padding:52px 28px">
   <div class="deps">
     <div class="dep">
-      <p class="dep-text">"Não é uma pessoa nova. É você — do jeito que sempre sentiu que deveria estar te olhando no espelho."</p>
+      <p class="dep-text">"Não é uma pessoa nova. É você — do jeito que você sempre quis se ver."</p>
       <p class="dep-who">PILAR EMOCIONAL · PROTOCOLO FLORENÇA</p>
     </div>
     <div class="dep">
@@ -524,7 +531,7 @@ body{
       <p class="dep-who">PACIENTE · 44 ANOS</p>
     </div>
     <div class="dep">
-      <p class="dep-text">"As pessoas perguntaram se eu tinha viajado. Não sabiam o quê — só que eu estava diferente."</p>
+      <p class="dep-text">"Não perguntaram o que eu fiz. Perguntaram se eu tinha descansado, viajado, mudado algo na rotina. Notaram a diferença — mas não conseguiram explicar de onde ela veio."</p>
       <p class="dep-who">PACIENTE · 51 ANOS</p>
     </div>
   </div>
@@ -533,7 +540,7 @@ body{
 <!-- ESPECIALISTA -->
 <section class="sec">
   <p class="label">A ESPECIALISTA</p>
-  <h2 class="h2">Ela prefere não fazer<br><em>a descaracterizar.</em></h2>
+  <h2 class="h2">Ela diz não quando o procedimento<br><em>fala mais alto do que você.</em></h2>
   <div class="rule"></div>
   <p class="p">O Protocolo Florença não é um menu. É uma curadoria assinada pela Dra. Marina — que avalia cada rosto como único e define <strong>o que faz sentido para aquela mulher específica</strong>, naquele momento.</p>
 
@@ -591,22 +598,22 @@ body{
   </div>
 
   <div class="av-valor">
-    <p class="av-valor-label">INVESTIMENTO NA AVALIAÇÃO</p>
+    <p class="av-valor-label">CONSULTA ESPECIALIZADA · INVESTIMENTO</p>
     <p class="av-valor-price"><sup>R$</sup>190<span style="font-size:24px">,00</span></p>
     <p class="av-valor-obs">100% REVERTIDO NO PROCEDIMENTO ESCOLHIDO</p>
-    <p class="av-valor-desc">Você não perde nada. Só ganha a clareza que deveria ter tido desde o início.</p>
+    <p class="av-valor-desc">A Dra. Marina não chega com protocolo pronto. Ela lê o seu rosto, entende cada camada e te entrega um plano que só existe para você.</p>
   </div>
 
   <a href="https://wa.me/555199999999" class="cta-primary">AGENDAR MINHA AVALIAÇÃO</a>
 
-  <p class="av-nota">A avaliação é presencial com a Dra. Marina Flôres em Porto Alegre.<br>O Protocolo Florença completo pode ser parcelado em até 10x sem juros — os juros ficam por conta da clínica.</p>
+  <p class="av-nota">A avaliação é presencial com a Dra. Marina Flôres em Porto Alegre.<br>O Protocolo Florença completo pode ser parcelado em até 10x sem juros.</p>
 </section>
 
 <!-- FINAL -->
 <div class="final">
   <p class="final-over">PROTOCOLO FLORENÇA</p>
   <h2 class="final-h">O rosto que você<br>perdeu ainda <em>existe.</em><br>A gente devolve.</h2>
-  <p class="final-p">Uma conversa. Um olhar atento. Um plano feito exclusivamente para você.</p>
+  <p class="final-p">Um diagnóstico, um olhar atento. Um plano feito exclusivamente para você.</p>
   <a href="https://wa.me/555199999999" class="final-btn">AGENDAR AVALIAÇÃO → </a>
   <p class="final-sig">DRA. MARINA FLÔRES · PORTO ALEGRE, RS · CRO 20691</p>
 </div>
