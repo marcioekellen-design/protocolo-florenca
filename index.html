@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<script>document.documentElement.classList.add("js-anim")</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Protocolo Florença · Dra. Marina Flôres</title>
@@ -45,14 +46,14 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
 .hero{
   min-height:100vh;
   display:flex;flex-direction:column;
-  padding:64px 28px 20px;
+  padding:96px 28px 40px;
   background:linear-gradient(160deg,var(--paper) 0%,var(--paper2) 60%,var(--paper3) 100%);
   position:relative;overflow:hidden;
 }
 .hero-inner{
   flex:1;display:grid;
   grid-template-columns:1fr 1fr;
-  gap:28px;align-items:center;
+  gap:28px;align-items:start;
   min-height:calc(100vh - 100px);
 }
 .hero-left{display:flex;flex-direction:column;justify-content:center;}
@@ -74,8 +75,8 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
   color:var(--ink);margin-bottom:20px;
 }
 .hero-h em{font-style:italic;color:var(--g)}
-.hero-divider{width:1px;height:48px;background:var(--g);margin:24px 0;opacity:.5}
-.hero-p{font-size:13px;line-height:2;color:var(--text);font-weight:300;max-width:300px;margin-bottom:36px;}
+.hero-divider{width:1px;height:26px;background:var(--g);margin:14px 0;opacity:.5}
+.hero-p{font-size:17px;line-height:1.9;color:var(--text);font-weight:300;max-width:360px;margin-bottom:34px;}
 .hero-ctas{display:flex;flex-direction:column;gap:10px;}
 .cta-primary{
   display:block;text-align:center;
@@ -123,7 +124,7 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
     line-height:1.1;
   }
   .hero-kicker{font-size:8px;letter-spacing:3px;}
-  .hero-p{font-size:12px;max-width:100%;}
+  .hero-p{font-size:16px;max-width:100%;}
   .hero-footnote{font-size:9px;letter-spacing:1px;}
 }
 
@@ -165,7 +166,7 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
   .h2{font-size:26px;}
 }
 .rule{width:32px;height:1px;background:var(--g);margin:20px 0;opacity:.6}
-.p{font-size:13px;line-height:2;color:var(--text);font-weight:300}
+.p{font-size:16px;line-height:1.9;color:var(--text);font-weight:300}
 .p strong{color:var(--ink);font-weight:500}
 .sec-dark .p{color:rgba(250,246,240,0.65)}
 .sec-dark .p strong{color:var(--paper)}
@@ -182,7 +183,7 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
 .camada-tag{font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:6px;font-weight:500;}
 .camada-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--ink);margin-bottom:8px;}
 .sec-dark .camada-name{color:var(--paper)}
-.camada-text{font-size:12px;line-height:1.9;color:var(--text);font-weight:300}
+.camada-text{font-size:15px;line-height:1.8;color:var(--text);font-weight:300}
 .sec-dark .camada-text{color:rgba(250,246,240,0.55)}
 
 /* PROCEDIMENTOS */
@@ -193,17 +194,17 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
 .proc-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(184,146,42,0.15);line-height:1;}
 .proc-tag{font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:4px}
 .proc-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:var(--ink);}
-.proc-body{font-size:12px;line-height:2;color:var(--text);font-weight:300}
+.proc-body{font-size:15px;line-height:1.85;color:var(--text);font-weight:300}
 .proc-body strong{color:var(--ink);font-weight:500}
-.proc-dado{margin-top:12px;background:var(--g4);border:1px solid rgba(184,146,42,0.15);padding:12px 14px;font-size:11px;color:var(--g);font-style:italic;line-height:1.6;}
+.proc-dado{margin-top:12px;background:var(--g4);border:1px solid rgba(184,146,42,0.15);padding:12px 14px;font-size:13px;color:var(--g);font-style:italic;line-height:1.6;}
 
 /* PROGRESSÃO */
 .prog-list{margin-top:40px}
 .prog{display:grid;grid-template-columns:70px 1fr;gap:0 16px;padding:24px 0;border-top:1px solid rgba(184,146,42,0.08);}
 .prog:last-child{border-bottom:1px solid rgba(184,146,42,0.08)}
-.prog-time{font-family:'Playfair Display',serif;font-size:11px;color:var(--g);font-style:italic;line-height:1.4;padding-top:3px;}
-.prog-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:6px;}
-.prog-text{font-size:12px;line-height:1.9;color:var(--text);font-weight:300}
+.prog-time{font-family:'Playfair Display',serif;font-size:13px;color:var(--g);font-style:italic;line-height:1.4;padding-top:3px;}
+.prog-title{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:6px;}
+.prog-text{font-size:15px;line-height:1.8;color:var(--text);font-weight:300}
 
 /* DEPOIMENTOS */
 .deps{margin-top:32px}
@@ -222,22 +223,22 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
 .av-bloco{border-top:1px solid rgba(184,146,42,0.12);padding:24px 0;display:grid;grid-template-columns:32px 1fr;gap:0 16px;}
 .av-bloco:last-child{border-bottom:1px solid rgba(184,146,42,0.12)}
 .av-n{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:rgba(184,146,42,0.25);line-height:1;}
-.av-title{font-size:11px;letter-spacing:2px;font-weight:500;color:var(--ink);margin-bottom:6px;}
-.av-text{font-size:12px;line-height:1.9;color:var(--text);font-weight:300}
+.av-title{font-size:13px;letter-spacing:2px;font-weight:500;color:var(--ink);margin-bottom:6px;}
+.av-text{font-size:15px;line-height:1.8;color:var(--text);font-weight:300}
 .av-valor{background:var(--ink);padding:32px 24px;margin:32px 0;}
 .av-valor-label{font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:14px}
 .av-valor-price{font-family:'Playfair Display',serif;font-size:56px;font-weight:400;color:var(--paper);line-height:1;margin-bottom:6px;}
 .av-valor-price sup{font-size:22px;vertical-align:super}
 .av-valor-obs{font-size:10px;letter-spacing:2px;color:var(--g);margin-bottom:16px;}
-.av-valor-desc{font-size:12px;line-height:1.9;color:rgba(250,246,240,0.55);font-weight:300;border-top:1px solid rgba(250,246,240,0.08);padding-top:14px;font-style:italic;}
-.av-nota{font-size:11px;line-height:1.9;color:var(--muted);text-align:center;margin:24px 0;border-top:1px solid rgba(184,146,42,0.08);padding-top:20px;}
+.av-valor-desc{font-size:15px;line-height:1.8;color:rgba(250,246,240,0.55);font-weight:300;border-top:1px solid rgba(250,246,240,0.08);padding-top:14px;font-style:italic;}
+.av-nota{font-size:13px;line-height:1.8;color:var(--muted);text-align:center;margin:24px 0;border-top:1px solid rgba(184,146,42,0.08);padding-top:20px;}
 
 /* FINAL */
 .final{background:var(--ink);padding:80px 28px 60px;text-align:center;}
 .final-over{font-size:9px;letter-spacing:5px;color:var(--g);margin-bottom:28px}
 .final-h{font-family:'Playfair Display',serif;font-size:36px;font-weight:400;font-style:italic;color:var(--paper);line-height:1.2;margin-bottom:12px;}
 .final-h em{color:var(--g2)}
-.final-p{font-size:12px;line-height:2;color:rgba(250,246,240,0.5);font-weight:300;margin-bottom:40px;}
+.final-p{font-size:15px;line-height:1.9;color:rgba(250,246,240,0.5);font-weight:300;margin-bottom:40px;}
 .final-btn{display:block;font-size:9px;letter-spacing:4px;font-weight:500;background:var(--g);color:var(--paper);padding:18px 24px;text-decoration:none;margin-bottom:40px;transition:all .3s;}
 .final-btn:hover{background:#D4AC4A}
 .final-sig{font-size:9px;letter-spacing:3px;color:rgba(250,246,240,0.2);}
@@ -253,6 +254,25 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
 .hero-p{animation:up .8s .5s both}
 .hero-ctas{animation:up .8s .65s both}
 .hero-footnote{animation:up .8s .8s both}
+
+/* ===== v2 animacoes ===== */
+@media (prefers-reduced-motion: no-preference){
+  html.js-anim .hero-kicker,
+  html.js-anim .hero-h,
+  html.js-anim .hero-divider,
+  html.js-anim .hero-p,
+  html.js-anim .hero-ctas,
+  html.js-anim .hero-foto,
+  html.js-anim .hero-footnote{ animation:none !important; opacity:0; }
+}
+.marquee{background:var(--ink);overflow:hidden;border-top:1px solid rgba(184,146,42,.18);border-bottom:1px solid rgba(184,146,42,.18);}
+.marquee-track{display:flex;white-space:nowrap;width:max-content;will-change:transform;}
+.marquee-track .mq{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:var(--g2);padding:16px 0;display:inline-flex;align-items:center;}
+.marquee-track .mq::after{content:'\00b7';margin:0 30px;color:rgba(184,146,42,.45);font-style:normal;}
+@media(max-width:640px){ .marquee-track .mq{font-size:16px;padding:13px 0;} }
+
+
+@media(min-width:641px){ .hero-foto{ margin-top:-80px; } }
 </style>
 </head>
 <body>
@@ -270,7 +290,7 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
         <p class="hero-kicker">DRA. MARINA FLÔRES · PORTO ALEGRE</p>
         <h1 class="hero-h">O rosto que você<br>perdeu ainda<br><em>existe.</em></h1>
         <div class="hero-divider"></div>
-        <p class="hero-p">O Protocolo Florença age simultaneamente nas três camadas do envelhecimento facial — de dentro para fora. O resultado é aquele que ninguém consegue nomear, mas todo mundo percebe.</p>
+        <p class="hero-p">O Protocolo Florença age simultaneamente nas três camadas do envelhecimento facial, de dentro para fora. O resultado é aquele que ninguém consegue nomear, mas todo mundo percebe.</p>
         <div class="hero-ctas">
           <a href="#agendar" class="cta-primary">QUERO ENTENDER MEU CASO</a>
           <a href="#protocolo" class="cta-ghost">COMO FUNCIONA</a>
@@ -286,8 +306,20 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
 
 <!-- BREAK EDITORIAL -->
 <div class="break">
-  <p class="break-q">"O melhor resultado é aquele que<br>as pessoas percebem — mas <em>não conseguem nomear.</em>"</p>
+  <p class="break-q">"O melhor resultado é aquele que<br>as pessoas percebem, mas <em>não conseguem nomear.</em>"</p>
   <p class="break-attr">DRA. MARINA FLÔRES</p>
+</div>
+
+<!-- FAIXA CORRENDO -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="mq">RESULTADO NATURAL</span>
+    <span class="mq">TRÊS CAMADAS · UM PROTOCOLO</span>
+    <span class="mq">ULTRASSOM DE IMAGEM</span>
+    <span class="mq">PRECISÃO CLÍNICA REAL</span>
+    <span class="mq">DRA. MARINA FLÔRES</span>
+    <span class="mq">PORTO ALEGRE</span>
+  </div>
 </div>
 
 <!-- O PROBLEMA -->
@@ -295,7 +327,7 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
   <p class="label">O QUE NINGUÉM EXPLICA</p>
   <h2 class="h2">O rosto não<br>envelhece em<br><em>um lugar só.</em></h2>
   <div class="rule"></div>
-  <p class="p">Ele envelhece em três camadas ao mesmo tempo. É por isso que um procedimento isolado nunca entrega o que você de fato quer — ele cuida de uma camada e ignora as outras duas.</p>
+  <p class="p">Ele envelhece em três camadas ao mesmo tempo. É por isso que um procedimento isolado nunca entrega o que você de fato quer, ele cuida de uma camada e ignora as outras duas.</p>
   <p class="p" style="margin-top:14px">O rosto melhora um pouco. Mas nunca fica como você sente que deveria.</p>
   <div class="camadas">
     <div class="camada">
@@ -311,7 +343,7 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
       <div class="camada-body">
         <p class="camada-tag">CAMADA INTERMEDIÁRIA</p>
         <h3 class="camada-name">O colágeno</h3>
-        <p class="camada-text">Que foi sumindo aos poucos, levando a firmeza e o contorno junto. Essa sensação de que o rosto "derreteu" — é real. E tem solução.</p>
+        <p class="camada-text">Que foi sumindo aos poucos, levando a firmeza e o contorno junto. Essa sensação de que o rosto "derreteu", é real. E tem solução.</p>
       </div>
     </div>
     <div class="camada">
@@ -330,22 +362,22 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
   <p class="label">O PROTOCOLO</p>
   <h2 class="h2">Três camadas.<br><em>Ao mesmo tempo.</em></h2>
   <div class="rule"></div>
-  <p class="p">O Florença é o único protocolo que age simultaneamente nas três camadas — com tecnologias específicas para cada uma delas.</p>
+  <p class="p">O Florença é o único protocolo que age simultaneamente nas três camadas, com tecnologias específicas para cada uma delas.</p>
   <div class="proc-list">
     <div class="proc">
       <div class="proc-header">
         <div><p class="proc-tag">ESTRUTURA MUSCULAR</p><h3 class="proc-name">HIPRO</h3></div>
         <div class="proc-num">01</div>
       </div>
-      <p class="proc-body">Ultrassom microfocado que age no <strong>SMAS</strong> — o sistema muscular profundo do rosto. A mesma camada que os cirurgiões plásticos reposicionam em um lifting. Sem corte, sem agulha, sem tempo de recuperação.<br><br>Pontos de coagulação térmica de precisão milimétrica. O rosto começa a se reposicionar de dentro para fora.</p>
-      <div class="proc-dado">Equipamento próprio da Dra. Marina — protocolo construído exclusivamente para o seu caso.</div>
+      <p class="proc-body">Ultrassom microfocado que age no <strong>SMAS</strong>, o sistema muscular profundo do rosto. A mesma camada que os cirurgiões plásticos reposicionam em um lifting. Sem corte, sem agulha, sem tempo de recuperação.<br><br>Pontos de coagulação térmica de precisão milimétrica. O rosto começa a se reposicionar de dentro para fora.</p>
+      <div class="proc-dado">Equipamento próprio da Dra. Marina, protocolo construído exclusivamente para o seu caso.</div>
     </div>
     <div class="proc">
       <div class="proc-header">
         <div><p class="proc-tag">COLÁGENO PROFUNDO</p><h3 class="proc-name">Sculptra</h3></div>
         <div class="proc-num">02</div>
       </div>
-      <p class="proc-body">O Sculptra não preenche de fora. Ele <strong>ativa o organismo para fabricar colágeno novo</strong> naquela área — como reiniciar um processo que desacelerou com a idade.<br><br>O ácido poli-L-láctico (PLLA) ativa os fibroblastos nas camadas profundas, gerando firmeza progressiva e duradoura que vem de dentro.</p>
+      <p class="proc-body">O Sculptra não preenche de fora. Ele <strong>ativa o organismo para fabricar colágeno novo</strong> naquela área, como reiniciar um processo que desacelerou com a idade.<br><br>O ácido poli-L-láctico (PLLA) ativa os fibroblastos nas camadas profundas, gerando firmeza progressiva e duradoura que vem de dentro.</p>
       <div class="proc-dado">Aumento comprovado de 66,5% na produção de colágeno tipo I. Duração de até 25 meses.</div>
     </div>
     <div class="proc">
@@ -353,8 +385,8 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
         <div><p class="proc-tag">SUPERFÍCIE DA PELE</p><h3 class="proc-name">Mesoterapia</h3></div>
         <div class="proc-num">03</div>
       </div>
-      <p class="proc-body">A camada que todo mundo vê primeiro — e que nenhum creme trata de verdade. A mesoterapia entrega <strong>vitaminas, minerais e ativos inteligentes diretamente onde a pele precisa</strong>, com absorção superior a 90%.<br><br>Aquele viço. Aquele glow. Como se a pele tivesse respirado de novo.</p>
-      <div class="proc-dado">Absorção superior a 90% — atua onde cremes simplesmente não chegam.</div>
+      <p class="proc-body">A camada que todo mundo vê primeiro, e que nenhum creme trata de verdade. A mesoterapia entrega <strong>vitaminas, minerais e ativos inteligentes diretamente onde a pele precisa</strong>, com absorção superior a 90%.<br><br>Aquele viço. Aquele glow. Como se a pele tivesse respirado de novo.</p>
+      <div class="proc-dado">Absorção superior a 90%, atua onde cremes simplesmente não chegam.</div>
     </div>
   </div>
 </section>
@@ -364,27 +396,27 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
   <p class="label" style="color:var(--g)">A JORNADA</p>
   <h2 class="h2">O resultado não<br>aparece de uma vez.<br><em>Ele vai chegando.</em></h2>
   <div class="rule"></div>
-  <p class="p">E é exatamente isso que o torna tão especial — e tão natural. Ninguém percebe o procedimento. Todo mundo percebe você.</p>
+  <p class="p">E é exatamente isso que o torna tão especial, e tão natural. Ninguém percebe o procedimento. Todo mundo percebe você.</p>
   <div class="prog-list">
     <div class="prog">
       <p class="prog-time">Primeiras<br>semanas</p>
       <div>
         <p class="prog-title" style="color:var(--paper)">A pele respira</p>
-        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O viço volta. A pele parece mais viva, mais descansada. Algo mudou — mas você ainda não consegue nomear o quê.</p>
+        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O viço volta. A pele parece mais viva, mais descansada. Algo mudou, mas você ainda não consegue nomear o quê.</p>
       </div>
     </div>
     <div class="prog">
       <p class="prog-time">30 a 60<br>dias</p>
       <div>
         <p class="prog-title" style="color:var(--paper)">A firmeza chega</p>
-        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O colágeno novo vai sendo depositado. O rosto ganha sustentação — como se estivesse recuperando uma estrutura que você nem sabia que havia perdido.</p>
+        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O colágeno novo vai sendo depositado. O rosto ganha sustentação, como se estivesse recuperando uma estrutura que você nem sabia que havia perdido.</p>
       </div>
     </div>
     <div class="prog">
       <p class="prog-time">60 a 90<br>dias</p>
       <div>
         <p class="prog-title" style="color:var(--paper)">O lifting se consolida</p>
-        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O SMAS responde. O contorno volta. O rosto se reposiciona. O resultado vai ficando cada vez mais natural — como se o tempo tivesse andado para trás.</p>
+        <p class="prog-text" style="color:rgba(250,246,240,0.55)">O SMAS responde. O contorno volta. O rosto se reposiciona. O resultado vai ficando cada vez mais natural, como se o tempo tivesse andado para trás.</p>
       </div>
     </div>
     <div class="prog">
@@ -401,7 +433,7 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
 <div class="break" style="padding:52px 28px">
   <div class="deps">
     <div class="dep">
-      <p class="dep-text">"Não é uma pessoa nova. É você — do jeito que você sempre quis se ver."</p>
+      <p class="dep-text">"Não é uma pessoa nova. É você, do jeito que você sempre quis se ver."</p>
       <p class="dep-who">PILAR EMOCIONAL · PROTOCOLO FLORENÇA</p>
     </div>
     <div class="dep">
@@ -420,15 +452,15 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
   <p class="label">A ESPECIALISTA</p>
   <h2 class="h2">Ela diz não quando o procedimento<br><em>fala mais alto do que você.</em></h2>
   <div class="rule"></div>
-  <p class="p">O Protocolo Florença não é um menu. É uma curadoria assinada pela Dra. Marina — que avalia cada rosto como único e define <strong>o que faz sentido para aquela mulher específica</strong>, naquele momento.</p>
+  <p class="p">O Protocolo Florença não é um menu. É uma curadoria assinada pela Dra. Marina, que avalia cada rosto como único e define <strong>o que faz sentido para aquela mulher específica</strong>, naquele momento.</p>
   <div style="margin-top:32px;padding:24px 20px;background:var(--paper3);border-left:2px solid var(--g)">
     <p style="font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:12px">DIFERENCIAL TÉCNICO</p>
     <p style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:10px">Ultrassom de imagem antes de qualquer aplicação.</p>
-    <p style="font-size:12px;line-height:1.9;color:var(--text);font-weight:300">A Dra. Marina é uma das poucas profissionais que visualiza exatamente como está a musculatura do rosto, o que ainda há de produto ativo de aplicações anteriores e onde cada ponto entregará o melhor resultado. Não é achismo. É precisão clínica real.</p>
+    <p style="font-size:15px;line-height:1.8;color:var(--text);font-weight:300">A Dra. Marina é uma das poucas profissionais que visualiza exatamente como está a musculatura do rosto, o que ainda há de produto ativo de aplicações anteriores e onde cada ponto entregará o melhor resultado. Não é achismo. É precisão clínica real.</p>
   </div>
   <div style="margin-top:16px;padding:24px 20px;background:var(--paper3);border-left:2px solid rgba(184,146,42,0.3)">
     <p style="font-size:8px;letter-spacing:4px;color:var(--g);margin-bottom:12px">FILOSOFIA</p>
-    <p style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--ink);line-height:1.6">"A técnica deve ser soberana. O resultado, invisível."</p>
+    <p style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--ink);line-height:1.6">"A técnica deve ser soberana. O resultado, natural."</p>
   </div>
 </section>
 
@@ -439,12 +471,12 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
   <div class="rule"></div>
   <div class="av-intro">
     <p class="p">Muitas pacientes chegam à Dra. Marina após anos carregando um incômodo que nunca foi realmente nomeado. Uma flacidez que foi chegando. Um contorno que foi cedendo. Um olhar que foi pesando.</p>
-    <p class="p" style="margin-top:14px">Sensações que elas sabem que existem — mas que ninguém até então soube olhar de verdade.</p>
+    <p class="p" style="margin-top:14px">Sensações que elas sabem que existem, mas que ninguém até então soube olhar de verdade.</p>
   </div>
   <div class="av-blocos">
     <div class="av-bloco">
       <div class="av-n">01</div>
-      <div><p class="av-title">MAPA DAS TRÊS CAMADAS</p><p class="av-text">A Dra. Marina analisa cada camada individualmente — entendendo o que o tempo levou de cada uma e o que ainda há de estrutura para trabalhar.</p></div>
+      <div><p class="av-title">MAPA DAS TRÊS CAMADAS</p><p class="av-text">A Dra. Marina analisa cada camada individualmente, entendendo o que o tempo levou de cada uma e o que ainda há de estrutura para trabalhar.</p></div>
     </div>
     <div class="av-bloco">
       <div class="av-n">02</div>
@@ -452,11 +484,11 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
     </div>
     <div class="av-bloco">
       <div class="av-n">03</div>
-      <div><p class="av-title">PROTOCOLO EXCLUSIVO</p><p class="av-text">O Florença não tem versão padrão. Ela monta o protocolo pensado só para você — o que fazer, em qual ordem, em qual camada. Sem receita pronta.</p></div>
+      <div><p class="av-title">PROTOCOLO EXCLUSIVO</p><p class="av-text">O Florença não tem versão padrão. Ela monta o protocolo pensado só para você, o que fazer, em qual ordem, em qual camada. Sem receita pronta.</p></div>
     </div>
     <div class="av-bloco">
       <div class="av-n">04</div>
-      <div><p class="av-title">CLAREZA REAL</p><p class="av-text">Você sai sabendo exatamente o que está acontecendo com o seu rosto — e o que ainda é possível recuperar. Não é pressão para fazer nada. É consciência.</p></div>
+      <div><p class="av-title">CLAREZA REAL</p><p class="av-text">Você sai sabendo exatamente o que está acontecendo com o seu rosto, e o que ainda é possível recuperar. Não é pressão para fazer nada. É consciência.</p></div>
     </div>
   </div>
   <div class="av-valor">
@@ -477,6 +509,185 @@ body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);over
   <a href="https://wa.me/555197572100" class="final-btn">AGENDAR AVALIAÇÃO → </a>
   <p class="final-sig">DRA. MARINA FLÔRES · PORTO ALEGRE, RS · CRO 20691</p>
 </div>
+
+
+<!-- ===== ANIMACOES v2 · Lenis + GSAP ===== -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.matchMedia('(max-width: 640px)').matches;
+
+  // Sem movimento OU bibliotecas nao carregaram: mostra tudo e sai (nada fica escondido)
+  if (reduce || typeof gsap === 'undefined' || typeof Lenis === 'undefined') {
+    document.documentElement.classList.remove('js-anim');
+    return;
+  }
+
+  const G = '#B8922A', PAPER = '#FAF6F0';
+
+  /* 1. SCROLL SUAVE (Lenis) */
+  document.documentElement.style.scrollBehavior = 'auto';
+  const lenis = new Lenis({
+    duration: 1.15,
+    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    smoothTouch: false
+  });
+  const navH = 56;
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length < 2) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      lenis.scrollTo(target, { offset: -navH, duration: 1.3 });
+    });
+  });
+
+  /* 2. GSAP */
+  gsap.registerPlugin(ScrollTrigger);
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(time => lenis.raf(time * 1000));
+  gsap.ticker.lagSmoothing(0);
+
+  const EASE = 'expo.out';
+
+  /* split de palavras (preserva <br> e o <em> dourado) */
+  function splitWords(el) {
+    const wrap = node => {
+      const frag = document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(part => {
+        if (part.trim() === '') { frag.appendChild(document.createTextNode(part)); return; }
+        const s = document.createElement('span');
+        s.className = 'hw'; s.style.display = 'inline-block'; s.textContent = part;
+        frag.appendChild(s);
+      });
+      node.replaceWith(frag);
+    };
+    Array.from(el.childNodes).forEach(child => {
+      if (child.nodeType === 3) wrap(child);
+      else if (child.nodeName === 'EM')
+        Array.from(child.childNodes).forEach(sub => { if (sub.nodeType === 3) wrap(sub); });
+    });
+    return el.querySelectorAll('.hw');
+  }
+
+  /* ---- HERO: intro cinematografica (fromTo p/ garantir o destino visivel) ---- */
+  const heroH = document.querySelector('.hero-h');
+  const heroWords = splitWords(heroH);
+  gsap.set(heroH, { opacity: 1, perspective: 600 }); // container visivel; palavras controladas abaixo
+  const intro = gsap.timeline({ defaults: { ease: EASE } });
+  intro
+    .fromTo('.hero-kicker', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.8 })
+    .fromTo(heroWords, { opacity: 0, y: '1em', rotateX: -55, transformOrigin: '0% 100%' },
+                       { opacity: 1, y: 0, rotateX: 0, duration: 1.1, stagger: 0.07 }, '-=0.3')
+    .fromTo('.hero-divider', { scaleY: 0, transformOrigin: 'top' }, { scaleY: 1, opacity: 1, duration: 0.7 }, '-=0.5')
+    .fromTo('.hero-p', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.9 }, '-=0.3')
+    .fromTo('.hero-ctas', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.9 }, '-=0.6')
+    .fromTo('.hero-foto', { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 1.4, ease: 'power3.out' }, '-=1.3')
+    .fromTo('.hero-footnote', { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.5');
+
+  /* ---- TITULOS de secao: palavras subindo com profundidade ---- */
+  document.querySelectorAll('.h2, .final-h').forEach(h => {
+    const words = splitWords(h);
+    gsap.set(h, { perspective: 700 });
+    gsap.from(words, {
+      opacity: 0, y: '1em', rotateX: -45, transformOrigin: '0% 100%',
+      duration: 1.0, ease: EASE, stagger: 0.05,
+      scrollTrigger: { trigger: h, start: 'top 82%', once: true }
+    });
+  });
+
+  /* ---- reveals gerais ---- */
+  function reveal(el, vars) {
+    gsap.from(el, Object.assign({
+      opacity: 0, y: 48, scale: 0.97, duration: 1.0, ease: EASE,
+      scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+    }, vars || {}));
+  }
+  document.querySelectorAll('.label, .rule, .p, .av-intro, .av-valor, .av-nota, .break-q, .final-over, .final-p, .final-btn, .av .cta-primary')
+    .forEach(el => reveal(el));
+
+  /* ---- grupos com stagger ---- */
+  [
+    ['#protocolo .proc', 0.16],
+    ['#resultado .prog', 0.13],
+    ['.deps .dep', 0.14],
+    ['.av-blocos .av-bloco', 0.12]
+  ].forEach(pair => {
+    const items = gsap.utils.toArray(pair[0]);
+    if (!items.length) return;
+    gsap.from(items, {
+      opacity: 0, y: 56, scale: 0.96, duration: 1.0, ease: EASE, stagger: pair[1],
+      scrollTrigger: { trigger: items[0], start: 'top 86%', once: true }
+    });
+  });
+
+  document.querySelectorAll('section.sec div[style*="border-left"]').forEach(el => reveal(el, { x: -28, y: 0 }));
+
+  /* ---- TRES CAMADAS: linha desenhando + pontos acendendo (scrub) ---- */
+  const camadasWrap = document.querySelector('#conceito .camadas');
+  if (camadasWrap) {
+    const camadas = camadasWrap.querySelectorAll('.camada');
+    const dots = camadasWrap.querySelectorAll('.camada-dot');
+    const tracks = camadasWrap.querySelectorAll('.camada-track');
+    gsap.from(camadas, {
+      opacity: 0, y: 40, duration: 0.9, ease: EASE, stagger: 0.12,
+      scrollTrigger: { trigger: camadasWrap, start: 'top 82%', once: true }
+    });
+    gsap.set(dots, { backgroundColor: PAPER });
+    gsap.set(dots[0], { backgroundColor: G });
+    gsap.set(tracks, { transformOrigin: 'top', scaleY: 0 });
+    const tlc = gsap.timeline({
+      scrollTrigger: { trigger: camadasWrap, start: 'top 65%', end: 'bottom 75%', scrub: 1 }
+    });
+    tracks.forEach((tr, i) => {
+      tlc.to(tr, { scaleY: 1, duration: 1, ease: 'none' })
+         .to(dots[i + 1], { backgroundColor: G, scale: 1.4, duration: 0.25 }, '>-0.05')
+         .to(dots[i + 1], { scale: 1, duration: 0.25 });
+    });
+  }
+
+  /* ---- FAIXA CORRENDO ---- */
+  const track = document.querySelector('.marquee-track');
+  if (track) {
+    track.innerHTML += track.innerHTML;
+    gsap.to(track, { xPercent: -50, repeat: -1, duration: isMobile ? 16 : 24, ease: 'none' });
+  }
+
+  /* ---- PRECO contando 0 -> 190 ---- */
+  const priceEl = document.querySelector('.av-valor-price');
+  if (priceEl) {
+    let node = null;
+    priceEl.childNodes.forEach(n => { if (n.nodeType === 3 && n.textContent.trim() === '190') node = n; });
+    if (node) {
+      const span = document.createElement('span'); span.textContent = '0';
+      node.replaceWith(span);
+      const obj = { v: 0 };
+      gsap.to(obj, {
+        v: 190, duration: 1.8, ease: 'power2.out',
+        scrollTrigger: { trigger: priceEl, start: 'top 85%', once: true },
+        onUpdate: () => { span.textContent = Math.round(obj.v); }
+      });
+    }
+  }
+
+  /* ---- parallax da foto (desktop) ---- */
+  if (!isMobile) {
+    gsap.to('.hero-foto', {
+      yPercent: 18, ease: 'none',
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+    });
+  }
+
+  window.addEventListener('load', () => ScrollTrigger.refresh());
+})();
+
+</script>
 
 </body>
 </html>
